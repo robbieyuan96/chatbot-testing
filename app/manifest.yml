@@ -1,0 +1,15 @@
+---
+declared-services:
+  my-watson-assistant-service:
+    label: conversation
+    plan: standard
+applications:
+- name: jericoh-chatbot
+  command: npm start
+  path: .
+  memory: 512M
+  instances: 1
+  services:
+  - Watson Assistant (formerly Conversation)-z4
+  env:
+    NPM_CONFIG_PRODUCTION: false
